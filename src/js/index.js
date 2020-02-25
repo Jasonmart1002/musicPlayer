@@ -41,17 +41,6 @@ const Songs = () => {
 									console.log(source);
 								}}>
 								{t.name}
-								<audio controls>
-									<source
-										src={
-											"https://assets.breatheco.de/apis/sound/" +
-											t.url
-										}
-										type="audio/mpeg"
-									/>
-									Your browser does not support the audio
-									element.
-								</audio>
 							</li>
 					  ))}
 			</ul>
@@ -64,13 +53,3 @@ const Songs = () => {
 };
 
 ReactDOM.render(<Songs />, document.querySelector("#app"));
-
-{
-	/* <audio>
-	<source
-		src={"https://assets.breatheco.de/apis/sound/" + t.url}
-		type="audio/mpeg"
-	/>
-	Your browser does not support the audio element.
-</audio>; */
-}

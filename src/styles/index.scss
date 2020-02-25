@@ -11,6 +11,10 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body {
+    background-color: rgb(45, 45, 45);
+}
+
 .songs {
     list-style-type: none;
     color: rgb(22, 22, 22);
@@ -18,4 +22,7 @@
     padding: 5px;
     background-color: rgb(235, 235, 235);
     border: 1px solid black;
+}
+ul {
+    margin-top: 15px ;
 }
