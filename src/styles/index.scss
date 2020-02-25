@@ -11,3 +11,11 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.songs {
+    list-style-type: none;
+    color: rgb(22, 22, 22);
+    font-size: 20px;
+    padding: 5px;
+    background-color: rgb(235, 235, 235);
+    border: 1px solid black;
+}
