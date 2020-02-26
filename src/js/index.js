@@ -24,6 +24,8 @@ const Songs = () => {
 		"https://assets.breatheco.de/apis/sound/files/mario/songs/castle.mp3"
 	);
 
+	const [currentSongName, setCurrentSongName] = useState("Mario Castle");
+
 	useEffect(
 		() =>
 			fetch("https://assets.breatheco.de/apis/sound/songs")
@@ -33,27 +35,46 @@ const Songs = () => {
 	);
 
 	return (
-		<div className="container text-center">
-			<ul>
-				{music === null
-					? "Loading..."
-					: music.map((t, index) => (
-							<li
-								key={index}
-								id="mysound"
-								className="songs"
-								onClick={() => {
-									setSource(
-										"https://assets.breatheco.de/apis/sound/" +
-											t.url
-									);
-									console.log(source);
-								}}>
-								{t.name}
-							</li>
-					  ))}
-			</ul>
-			<AudioPlayer />
+		<div className="container-fluid main">
+			<div className="container text-center list">
+				<div class="dropdown">
+					<button
+						class="btn btn-secondary btn-lg dropdown-toggle"
+						type="button"
+						id="dropdownMenuButton"
+						data-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false">
+						{currentSongName}
+					</button>
+					<div
+						class="dropdown-menu"
+						aria-labelledby="dropdownMenuButton">
+						{music === null
+							? "Loading..."
+							: music.map((t, index) => (
+									<a
+										class="dropdown-item"
+										type="button"
+										className="list-group-item list-group-item-action"
+										key={index}
+										id="mysound"
+										onClick={() => {
+											setSource(
+												"https://assets.breatheco.de/apis/sound/" +
+													t.url
+											);
+											setCurrentSongName(t.name);
+										}}>
+										{t.name}
+									</a>
+							  ))}
+					</div>
+				</div>
+				<div className="container audioplay">
+					<AudioPlayer />
+				</div>
+			</div>
 		</div>
 	);
 };
