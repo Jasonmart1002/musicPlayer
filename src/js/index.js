@@ -9,14 +9,14 @@ import "bootstrap";
 import "../styles/index.scss";
 
 const Songs = () => {
-	const AudioPlayer = x => {
-		return (
-			<audio controls>
-				<source src={source} type="audio/mpeg" />
-				Your browser does not support the audio element.
-			</audio>
-		);
-	};
+	// const AudioPlayer = x => {
+	// 	return (
+	// 		<audio id="player">
+	// 			<source src={source} type="audio/mpeg" />
+	// 			Your browser does not support the audio element.
+	// 		</audio>
+	// 	);
+	// };
 
 	const [music, setMusic] = useState(null);
 
@@ -37,9 +37,9 @@ const Songs = () => {
 	return (
 		<div className="container-fluid main">
 			<div className="container text-center list">
-				<div class="dropdown">
+				<div className="dropdown">
 					<button
-						class="btn btn-secondary btn-lg dropdown-toggle"
+						className="btn btn-secondary btn-lg dropdown-toggle"
 						type="button"
 						id="dropdownMenuButton"
 						data-toggle="dropdown"
@@ -48,13 +48,13 @@ const Songs = () => {
 						{currentSongName}
 					</button>
 					<div
-						class="dropdown-menu"
+						className="dropdown-menu"
 						aria-labelledby="dropdownMenuButton">
 						{music === null
 							? "Loading..."
 							: music.map((t, index) => (
 									<a
-										class="dropdown-item"
+										className="dropdown-item"
 										type="button"
 										className="list-group-item list-group-item-action"
 										key={index}
@@ -72,7 +72,40 @@ const Songs = () => {
 					</div>
 				</div>
 				<div className="container audioplay">
-					<AudioPlayer />
+					<audio id="player" src={source}>
+						<source src={source} type="audio/mpeg" />
+						Your browser does not support the audio element.
+					</audio>
+					<div className="audioPlayer">
+						<button
+							onClick={() =>
+								document.getElementById("player").play()
+							}>
+							Play
+						</button>
+						<button
+							onClick={() =>
+								document.getElementById("player").pause()
+							}>
+							Pause
+						</button>
+						<button
+							onClick={() =>
+								(document.getElementById(
+									"player"
+								).volume += 0.1)
+							}>
+							Vol +
+						</button>
+						<button
+							onClick={() =>
+								(document.getElementById(
+									"player"
+								).volume -= 0.1)
+							}>
+							Vol -
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

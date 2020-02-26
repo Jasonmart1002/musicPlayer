@@ -13,20 +13,22 @@
 */
 body {
     background-color: rgb(226, 226, 226);
+    background-image: url(https://i.pinimg.com/originals/e6/0e/53/e60e531bb26f15c5f69c2cb35633bf46.jpg);
 }
 
 
 .list {
-    width: 50%;
     padding-top: 25px;
 }
 
-.audioplay{
-    display: flex;
-    justify-content: center;
-    width: 50%;
+.audioPlayer{
+    float: right;
 }
+
+
 
 .btn-secondary{
     float: left;
+    color: black;
+    background-color: #dfdfdf;
 }
