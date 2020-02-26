@@ -9,6 +9,15 @@ import "bootstrap";
 import "../styles/index.scss";
 
 const Songs = () => {
+	const AudioPlayer = x => {
+		return (
+			<audio controls>
+				<source src={source} type="audio/mpeg" />
+				Your browser does not support the audio element.
+			</audio>
+		);
+	};
+
 	const [music, setMusic] = useState(null);
 
 	const [source, setSource] = useState(
@@ -44,10 +53,7 @@ const Songs = () => {
 							</li>
 					  ))}
 			</ul>
-			<audio controls>
-				<source src={source} type="audio/mpeg" />
-				Your browser does not support the audio element.
-			</audio>
+			<AudioPlayer />
 		</div>
 	);
 };
