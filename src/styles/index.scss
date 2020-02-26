@@ -12,7 +12,6 @@
 
 */
 body {
-    background-color: rgb(226, 226, 226);
     background-image: url(https://i.pinimg.com/originals/e6/0e/53/e60e531bb26f15c5f69c2cb35633bf46.jpg);
 }
 
@@ -25,10 +24,34 @@ body {
     float: right;
 }
 
+.play{
+    background-color: #dfdfdf00;
+    border: black 1px solid;
+    color: rgb(40, 40, 40);
+}
+
+.pause{
+    background-color: #dfdfdf00;
+    border: black 1px solid;
+    color: rgb(40, 40, 40);
+}
+
+.volup{
+    background-color: #dfdfdf00;
+    border: black 1px solid;
+    color: rgb(40, 40, 40);
+}
+.voldown{
+    background-color: #dfdfdf00;
+    border: black 1px solid;
+    color: rgb(40, 40, 40);
+}
+
 
 
 .btn-secondary{
     float: left;
-    color: black;
-    background-color: #dfdfdf;
+    color: rgb(40, 40, 40);
+    background-color: #dfdfdf00;
+    border: black 1px solid;
 }

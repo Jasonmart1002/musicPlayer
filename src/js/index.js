@@ -69,18 +69,21 @@ const Songs = () => {
 					</audio>
 					<div className="audioPlayer">
 						<button
+							class="btn btn-primary play"
 							onClick={() =>
 								document.getElementById("player").play()
 							}>
 							Play
 						</button>
 						<button
+							class="btn btn-primary pause"
 							onClick={() =>
 								document.getElementById("player").pause()
 							}>
 							Pause
 						</button>
 						<button
+							class="btn btn-primary volup"
 							onClick={() =>
 								(document.getElementById(
 									"player"
@@ -89,6 +92,7 @@ const Songs = () => {
 							Vol +
 						</button>
 						<button
+							class="btn btn-primary voldown"
 							onClick={() =>
 								(document.getElementById(
 									"player"
