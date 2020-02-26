@@ -9,15 +9,6 @@ import "bootstrap";
 import "../styles/index.scss";
 
 const Songs = () => {
-	// const AudioPlayer = x => {
-	// 	return (
-	// 		<audio id="player">
-	// 			<source src={source} type="audio/mpeg" />
-	// 			Your browser does not support the audio element.
-	// 		</audio>
-	// 	);
-	// };
-
 	const [music, setMusic] = useState(null);
 
 	const [source, setSource] = useState(
